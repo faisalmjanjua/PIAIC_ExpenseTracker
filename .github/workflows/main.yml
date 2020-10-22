@@ -40,4 +40,4 @@ jobs:
         run: npm install surge
         
       - name: Deploy Surge
-        run: surge --project ./build react-expense-tracker-fj.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+         run: surge ./build react-expense-tracker-fj.surge.sh --token ${{ secrets.SURGE_TOKEN }}
