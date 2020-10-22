@@ -29,13 +29,15 @@ jobs:
           node_version: 12 
 
       # Runs a set of commands using the runners shell
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install # 
+      # - uses: borales/actions-yarn@v2.0.0
+      #   with:
+      #     cmd: install # 
           
+      - name: Build React
+        run: npm run build
           
       - name: Install Surge
         run: npm install --global surge
         
       - name: Deploy Surge
-        run: surge ./build react-expense-tracker-fj.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./build react-expense-tracker-adil.surge.sh --token ${{ secrets.SURGE_TOKEN }}
